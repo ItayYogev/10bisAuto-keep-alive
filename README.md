@@ -2,6 +2,14 @@
 
 ## Keep Alive repair variant
 
+Comparison: `10bisAuto` is the unchanged original; `10bisAuto-fixed` adds daily
+payment safety and five-minute 09:00-18:00 Israel scheduling opportunities.
+`10bisAuto-upstream-latest` identifies upstream commit `d503933` explicitly.
+This variant and that snapshot currently have the same payment code and original
+07:05 UTC Sunday-Thursday schedule; neither includes the fixed variant's daily guard.
+Compare each repository's Actions > Load Credit payment steps, not Keep Alive
+results, to distinguish scheduling, refresh and payment outcomes.
+
 This repository preserves the original credit-loading and token-refresh code.
 Only Keep Alive is repaired: the duplicate echo-only workflow is removed, and
 the remaining workflow explicitly requests `contents: write`, checks out the
