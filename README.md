@@ -1,5 +1,16 @@
 # 10bis Automation System
 
+## Keep Alive repair variant
+
+This repository preserves the original credit-loading and token-refresh code.
+Only Keep Alive is repaired: the duplicate echo-only workflow is removed, and
+the remaining workflow explicitly requests `contents: write`, checks out the
+default branch and supports manual validation without loading credit.
+Credit loading keeps its original Sunday-Thursday 07:05 UTC schedule.
+Secrets are configured separately in this repository. Independent payment repos
+can each load money; there is no cross-repository duplicate-payment protection.
+Sharing the same 10bis authentication session can cause token-refresh interference.
+
 An automated system for managing 10bis credit loading and token refresh operations. Choose from three deployment options: **GitHub Actions** (cloud-based, no server required), **Linux Server** (traditional cron-based), or **Docker** (containerized testing).
 
 ## Features
